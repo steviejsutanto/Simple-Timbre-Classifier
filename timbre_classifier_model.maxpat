@@ -39,6 +39,53 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-9",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 482.0, 270.0, 70.0, 22.0 ],
+					"text" : "r scriptCmd"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 333.0, 546.5, 72.0, 22.0 ],
+					"text" : "s scriptCmd"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-3",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 82.0, 518.0, 249.0, 60.0 ],
+					"text" : "1. Install the node-modules (first time only) ->\n2. Script start\n3. Train\n4. Turn on audio and predict mode"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 333.0, 518.0, 98.0, 22.0 ],
+					"text" : "script npm install"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-17",
 					"maxclass" : "comment",
 					"numinlets" : 1,
@@ -66,20 +113,20 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 459.0, 309.5, 282.0, 33.0 ],
-					"text" : "The default training data causes overfitting.\nTry modifying or increasing it inside the node script."
+					"patching_rect" : [ 655.0, 474.0, 380.0, 33.0 ],
+					"text" : "The default training data causes overfitting.\nTry modifying it inside the node script or making a real training data."
 				}
 
 			}
 , 			{
 				"box" : 				{
 					"id" : "obj-5",
-					"linecount" : 5,
+					"linecount" : 6,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 102.0, 93.0, 128.0, 87.0 ],
-					"text" : "try:\n1. hissing (shh / sss)\n2. rubbing the mic\n3. knocking on the mic\n4. whistling\n"
+					"text" : "try:\n1. hissing (shh / sss)\n2. rubbing the mic\n3. knocking on the mic\n4. whistling\n5. etc.."
 				}
 
 			}
@@ -153,7 +200,6 @@
 						"tags" : "",
 						"style" : "",
 						"subpatcher_template" : "",
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-8",
@@ -561,8 +607,21 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "signal", "" ],
-					"parameter_enable" : 0,
-					"patching_rect" : [ 30.0, 120.0, 22.0, 140.0 ]
+					"parameter_enable" : 1,
+					"patching_rect" : [ 30.0, 120.0, 22.0, 140.0 ],
+					"saved_attribute_attributes" : 					{
+						"valueof" : 						{
+							"parameter_shortname" : "gain~",
+							"parameter_type" : 0,
+							"parameter_longname" : "gain~",
+							"parameter_initial_enable" : 1,
+							"parameter_mmax" : 157.0,
+							"parameter_initial" : [ 157.0 ]
+						}
+
+					}
+,
+					"varname" : "gain~"
 				}
 
 			}
@@ -585,7 +644,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 331.0, 186.0, 90.0, 22.0 ],
+					"patching_rect" : [ 301.0, 186.0, 90.0, 22.0 ],
 					"text" : "loadmess 5000"
 				}
 
@@ -597,7 +656,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 406.0, 210.0, 87.0, 22.0 ],
+					"patching_rect" : [ 376.0, 210.0, 87.0, 22.0 ],
 					"text" : "loadmess 0.25"
 				}
 
@@ -611,7 +670,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 406.0, 240.0, 50.0, 22.0 ]
+					"patching_rect" : [ 376.0, 240.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -622,20 +681,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 406.0, 270.0, 89.0, 22.0 ],
+					"patching_rect" : [ 376.0, 270.0, 89.0, 22.0 ],
 					"text" : "learningrate $1"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-25",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 1,
-					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 511.0, 240.0, 58.0, 22.0 ],
-					"text" : "loadbang"
 				}
 
 			}
@@ -647,7 +694,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 331.0, 240.0, 50.0, 22.0 ]
+					"patching_rect" : [ 301.0, 240.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -658,7 +705,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 331.0, 270.0, 58.0, 22.0 ],
+					"patching_rect" : [ 301.0, 270.0, 58.0, 22.0 ],
 					"text" : "epoch $1"
 				}
 
@@ -670,7 +717,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 285.0, 345.0, 71.0, 22.0 ],
+					"patching_rect" : [ 255.0, 345.0, 71.0, 22.0 ],
 					"text" : "route report"
 				}
 
@@ -682,7 +729,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 285.0, 375.0, 41.0, 22.0 ],
+					"patching_rect" : [ 255.0, 375.0, 41.0, 22.0 ],
 					"text" : "set $1"
 				}
 
@@ -690,11 +737,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-13",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 285.0, 420.0, 239.0, 20.0 ],
-					"text" : "I hear nothing..."
+					"patching_rect" : [ 255.0, 420.0, 380.0, 47.0 ],
+					"text" : "\n        Training finished with 0.00083362 loss and 1.00000000 accuracy\n        "
 				}
 
 			}
@@ -705,7 +753,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 577.0, 270.0, 63.0, 22.0 ],
+					"patching_rect" : [ 499.0, 518.0, 63.0, 22.0 ],
 					"text" : "script stop"
 				}
 
@@ -717,7 +765,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 511.0, 270.0, 64.0, 22.0 ],
+					"patching_rect" : [ 433.0, 518.0, 64.0, 22.0 ],
 					"text" : "script start"
 				}
 
@@ -729,7 +777,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 285.0, 270.0, 32.0, 22.0 ],
+					"patching_rect" : [ 255.0, 270.0, 32.0, 22.0 ],
 					"text" : "train"
 				}
 
@@ -748,7 +796,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"offset" : [ 0.0, 0.0 ],
-					"patching_rect" : [ 537.0, 363.0, 400.0, 220.0 ],
+					"patching_rect" : [ 635.0, 509.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -760,7 +808,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 285.0, 315.0, 168.0, 22.0 ],
+					"patching_rect" : [ 255.0, 315.0, 267.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
@@ -769,7 +817,7 @@
 						"watch" : 1
 					}
 ,
-					"text" : "node.script index.js @watch 1"
+					"text" : "node.script simple_timbre_classifier.js @watch 1"
 				}
 
 			}
@@ -784,21 +832,21 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-4", 0 ],
-					"midpoints" : [ 443.5, 357.0, 546.5, 357.0 ],
+					"midpoints" : [ 512.5, 405.0, 644.5, 405.0 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-10", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
+					"destination" : [ "obj-6", 0 ],
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -826,15 +874,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-18", 0 ],
-					"source" : [ "obj-24", 0 ]
+					"destination" : [ "obj-6", 0 ],
+					"source" : [ "obj-20", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-10", 0 ],
-					"source" : [ "obj-25", 0 ]
+					"destination" : [ "obj-18", 0 ],
+					"source" : [ "obj-24", 0 ]
 				}
 
 			}
@@ -917,7 +965,22 @@
 				}
 
 			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-9", 0 ]
+				}
+
+			}
  ],
+		"parameters" : 		{
+			"obj-63" : [ "gain~", "gain~", 0 ],
+			"parameterbanks" : 			{
+
+			}
+
+		}
+,
 		"dependency_cache" : [ 			{
 				"name" : "n4m.monitor.maxpat",
 				"bootpath" : "C74:/packages/Node For Max/patchers/debug-monitor",
@@ -932,7 +995,7 @@
 			}
 , 			{
 				"name" : "16-bin-filter.maxpat",
-				"bootpath" : "~/Documents/Max 8/Projects/max-n4m-tfjs/patchers",
+				"bootpath" : "~/Desktop/Github/max-n4m-tfjs",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
