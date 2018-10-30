@@ -7,8 +7,10 @@ Please note that this classifier is only made for the purpose of n4m-tfjs-node d
 
 You can install the required modules by clicking on [script npm install] inside the patcher file.
 
+The simple_timbre_classifier.js code is partly inspired from Coding Train's Color Classifier example. Visit here for more information https://github.com/CodingTrain/ColorClassifer-TensorFlow.js.
+
 Look at https://js.tensorflow.org/ for more info on the js code.
 
 Node for Max is only available in Max 8. To see other examples, visit https://github.com/Cycling74/n4m-examples.
 
-The simple_timbre_classifier.js code is partly inspired from Coding Train's Color Classifier example. Visit here for more information https://github.com/CodingTrain/ColorClassifer-TensorFlow.js.
+
