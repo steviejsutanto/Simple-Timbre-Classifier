@@ -1,13 +1,13 @@
 {
-  "name": "patchers",
+  "name": "simple_timbre_classifier",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "simple_timbre_classifier.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Stevie J. Sutanto",
+  "license": "MIT",
   "dependencies": {
     "@tensorflow/tfjs-node": "^0.1.19"
   }
