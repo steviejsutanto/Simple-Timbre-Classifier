@@ -1,7 +1,7 @@
 {
-  "name": "simple_timbre_classifier",
+  "name": "max-n4m-tfjs",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple timbre classifier example in Max 8 using n4m-tfjs-node",
   "main": "simple_timbre_classifier.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

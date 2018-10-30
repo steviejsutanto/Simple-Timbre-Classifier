@@ -266,8 +266,8 @@
 									"maxclass" : "newobj",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 51.0, 149.0, 122.0, 22.0 ],
-									"text" : "pfft~ 16-bin-filter 32 2"
+									"patching_rect" : [ 51.0, 149.0, 95.0, 22.0 ],
+									"text" : "pfft~ 16-bin 32 2"
 								}
 
 							}
@@ -737,12 +737,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-13",
-					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 255.0, 420.0, 380.0, 47.0 ],
-					"text" : "\n        Training finished with 0.00083362 loss and 1.00000000 accuracy\n        "
+					"patching_rect" : [ 255.0, 420.0, 380.0, 20.0 ],
+					"text" : "Ready... Click train!"
 				}
 
 			}
@@ -994,7 +993,7 @@
 				"implicit" : 1
 			}
 , 			{
-				"name" : "16-bin-filter.maxpat",
+				"name" : "16-bin.maxpat",
 				"bootpath" : "~/Desktop/Github/max-n4m-tfjs",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
