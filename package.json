@@ -9,6 +9,6 @@
   "author": "Stevie J. Sutanto",
   "license": "MIT",
   "dependencies": {
-    "@tensorflow/tfjs-node": "^0.1.19"
+    "@tensorflow/tfjs-node": "^4.22.0"
   }
 }
